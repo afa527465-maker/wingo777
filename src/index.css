@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-display: 'Plus Jakarta Sans', 'Noto Sans Khmer', 'Noto Sans Thai', 'Noto Sans Lao', 'Noto Sans Myanmar', 'Noto Sans Arabic', 'Noto Sans Devanagari', 'Noto Sans Bengali', system-ui, -apple-system, sans-serif;
+    --font-sans: 'DM Sans', 'Noto Sans Khmer', 'Noto Sans Thai', 'Noto Sans Lao', 'Noto Sans Myanmar', 'Noto Sans Arabic', 'Noto Sans Devanagari', 'Noto Sans Bengali', system-ui, -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+  }
+
+  html {
+    font-family: var(--font-sans);
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-mono-num {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+.wingo-gradient {
+  background: linear-gradient(135deg, #ff7a45 0%, #f54e2e 55%, #e63e22 100%);
+}
+
+.wingo-gradient-soft {
+  background: linear-gradient(180deg, #ff7546 0%, #f75232 100%);
+}
+
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
